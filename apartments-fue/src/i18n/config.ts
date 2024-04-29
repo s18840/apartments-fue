@@ -1,6 +1,9 @@
 import i18n from "i18next";                      
 import { initReactI18next } from "react-i18next";
 
+
+const userLocale = navigator.language;
+
 i18n
   .use(initReactI18next)
   .init({
@@ -10,7 +13,7 @@ i18n
     // when a user visits our site for the first time.
     // We use English here, but feel free to use
     // whichever locale you want.                   
-    lng: "de",
+    lng: `${userLocale}`,
 
     // Fallback locale used when a translation is
     // missing in the active locale. Again, use your
@@ -28,21 +31,36 @@ i18n
         translation: {
             car: "car",
             footer: "footer",
-            header: "header"
+            header: "header",
+            About_us: "About us",
+            Our_offer: "Our offer"
         },
       },
       pl: {
         translation: {
             car: "samochód",
             footer: "stopka",
-            header: "nagłówek"
+            header: "nagłówek",
+            About_us: "O nas",
+            Our_offer: "Nasza oferta"
         },
       },
       de: {
         translation: {
             car: "Auto",
             footer: "Fusszeile",
-            header: "Überschrift"
+            header: "Überschrift",
+            About_us: "Über uns",
+            Our_offer: "Unser Angebot"
+        },
+      },
+      es: {
+        translation: {
+            car: "coche",
+            footer: "pie de página",
+            header: "encabezado",
+            About_us: "Sobre nosotros",
+            Our_offer: "Nuestra oferta"
         },
       },
     },
