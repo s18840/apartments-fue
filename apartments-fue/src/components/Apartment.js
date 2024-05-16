@@ -1,7 +1,7 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { useTranslation } from "react-i18next";
-import { FreeMode, Navigation, Thumbs } from "swiper/modules";
+import { FreeMode, Navigation, Thumbs, Pagination } from "swiper/modules";
 import i18n from "i18next";
 import Facilities from "./Facilities";
 import Furnishings from "./Furnishings";
@@ -17,12 +17,26 @@ import "material-icons/iconfont/material-icons.css";
 function Apartment(props) {
   const [thumbsSwiper, setThumbsSwiper] = useState();
   const { t } = useTranslation();
-  console.log(props)
+  const mainSwiperRef = useRef(null);
+
+  const toggleFullScreen = () => {
+    if (mainSwiperRef.current) {
+      const swiperElement = mainSwiperRef.current.el || mainSwiperRef.current;
+      if (document.fullscreenElement) {
+        document.exitFullscreen();
+      } else {
+        swiperElement.requestFullscreen().catch((err) => {
+          console.error(`Error attempting to enable full-screen mode: ${err.message} (${err.name})`);
+        });
+      }
+    }
+  };
 
   return (
     <div className="apartment-container">
       <div className="swipers-container">
         <Swiper
+          ref={mainSwiperRef}
           style={{
             "--swiper-navigation-color": "#fff",
             "--swiper-pagination-color": "#fff",
@@ -30,12 +44,11 @@ function Apartment(props) {
           spaceBetween={10}
           loop={true}
           navigation={true}
-          thumbs={{
-            swiper:
-              thumbsSwiper && !thumbsSwiper.destroyed ? thumbsSwiper : null,
-          }}
-          modules={[FreeMode, Navigation, Thumbs]}
+          pagination={{ clickable: true }}
+          thumbs={{ swiper: thumbsSwiper && !thumbsSwiper.destroyed ? thumbsSwiper : null }}
+          modules={[FreeMode, Navigation, Thumbs, Pagination]}
           className="mySwiper2"
+          onClick={toggleFullScreen}
         >
           {props.images.map((image, index) => (
             <SwiperSlide key={index}>
@@ -44,16 +57,11 @@ function Apartment(props) {
           ))}
         </Swiper>
         <Swiper
-          style={{
-            "--swiper-navigation-color": "#fff",
-            "--swiper-pagination-color": "#fff",
-          }}
           onSwiper={setThumbsSwiper}
           spaceBetween={10}
           loop={true}
           slidesPerView={3}
           freeMode={true}
-          navigation={true}
           watchSlidesProgress={true}
           modules={[FreeMode, Navigation, Thumbs]}
           className="mySwiper"
@@ -71,26 +79,9 @@ function Apartment(props) {
         <div className="apartment-description">
           <div>
             {t(
-              "Odkryj luksus i komfort w naszym nowo odnowionym apartamencie położonym w malowniczej Costa Calma na Fuerteventurze."
+              "Komfortowy apartament Colores de Fuerteventura 2 w stylu boso po kapitalnym remoncie w marcu 2023 roku zostal wyposazony we wszystkie udogodnienia, ktore zapewniaja Gościom wygodny pobyt. Doskonale wyposażona nowoczesna kuchnia posiada płytę ceramiczna, kuchenkę mikrofalowa z grillem, zmywarkę, duża lodówka z zamrażarka ,toster, ekspres do kawy czajnik elektryczny, komplet garnków i zastawę stołowa co pozwala na wygodne przygotowywanie i degustacje posilkow. Znajdująca się obok przestrzeń jadalna i elegancka strefa wypoczynku wyposażona w wygodna rozkładana sofę , telewizor SMART TV oraz kącik do pracy w połączeniu szybkim bezprzewodowym internetem oferuje pelna gamę możliwości dla różnych form aktywności w trakcie pobytu.Przestronna sypialnia z łóżkami o wygodnych materacach i obszerna szafa zapewni możliwość wygodnego i komfortowego snu. Dużą łazienka to kolejna wygodna i stylowa przestrzeń dla naszych. Gości. Obszerna kabina prysznicowa z komfortowym natryskiem, dużą szafka z umywalka nad która znajduje się podświetlane lustro i niezbędne dodatki wyposażenia w tym ręczniki toaletowe i kąpielowe. Calosc dopełnia nowoczesna pralka z suszarka sprawia ze będziecie się mogli czuć w pełni komfortowo. Kolejna bardzo ważna przestrzenią jest taras w cieniu okazałych palm na którym nie mogło zabraknąć zestawu jadalnego umożliwiającego posiłki na świeżym powietrzu. Kompleks, w którym znajduje sie apartament dodatkowo sprawia, ze goscie czuja sie w nim wspaniale - dorodne palmy, spokoj, cisza, intymnosc miejsca- to tylko niektore atuty tej wyjatkowej lokalizacji. Znajdujace sie w nieopodal centrum handlowe z marketem, barami, restauracjami i egzotyczny bazar oraz znajdująca zaledwie w odleglosci zaledwie około 650 metrów piekna plaza Sotavento sprawiaja, ze wypoczynek tutaj to naprawde wspaniale przeżycie."
             )}
           </div>
-          <div>
-            {t(
-              "Ten stylowy apartament znajduje się na kameralnym osiedlu z dostępem do wspólnego basenu, idealnego do relaksu i odpoczynku pod słońcem."
-            )}
-          </div>
-          <div>{t("")}</div>
-          <div>{t("")}</div>
-
-          {t(
-            "Apartament został kompleksowo zmodernizowany w 2022 roku, oferując nowoczesne wykończenia i najwyższej jakości materiały. Wnętrze charakteryzuje się przestronnością i jasnością, z eleganckimi meblami, które zapewniają komfortowy pobyt."
-          )}
-          {t(
-            "Kuchnia jest w pełni wyposażona, z nowoczesnymi sprzętami i dużą ilością miejsca do przygotowywania posiłków. Przestronny salon z wyjściem na balkon oferuje przepiękne widoki na okolicę i jest idealnym miejscem do relaksu."
-          )}
-          {t(
-            "Sypialnie są zaprojektowane z myślą o maksymalnym komforcie, z dużymi łóżkami i miękką pościelą. Nowoczesna łazienka z eleganckimi armaturami zapewnia odświeżające chwile po dniu pełnym słońca i zabawy."
-          )}
         </div>
         <div>
           {t("Furnishings")}

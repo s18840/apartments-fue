@@ -16,7 +16,11 @@ function Furnishings(props) {
       </div>
       <div className="basic-container">
         <span className="material-icons-outlined">smoke_free</span>
-        <p className="text">{t("No smoking")}</p>
+        <p className="text">{t("No smoking allowed")}</p>
+      </div>
+      <div className="basic-container">
+        <span className="material-icons-outlined">pets</span>
+        <p className="text">{t("No pets allowed")}</p>
       </div>
       <div className="basic-container">
         <span className="material-icons-outlined">local_laundry_service</span>
@@ -32,7 +36,7 @@ function Furnishings(props) {
       </div>
       <div className="basic-container">
         <span className="material-icons-outlined">checkroom</span>
-        <p className="text">{t("Hangers")}</p>
+        <p className="text">{t("Wardrobe with hangers")}</p>
       </div>
       <div className="basic-container">
         <span className="material-icons-outlined">iron</span>
@@ -40,7 +44,7 @@ function Furnishings(props) {
       </div>
       <div className="basic-container">
         <span className="material-icons-outlined">tv</span>
-        <p className="text">{t("Tv")}</p>
+        <p className="text">{t("Tv with Smart TV")}</p>
       </div>
       <div className="basic-container">
         <span className="material-icons-outlined">wifi</span>
