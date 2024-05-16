@@ -4,7 +4,7 @@ import "../styles/styles.scss";
 import logo from "../assets/home.png";
 import { useEffect, useState } from 'react';
 import i18n from 'i18next';
-
+import { useNavigate } from 'react-router-dom';
 import { PL, GB, DE, ES } from 'country-flag-icons/react/3x2'
 
 function Header() {
@@ -16,9 +16,15 @@ function Header() {
         setCurrentLanguage(lang);
     };
 
+    const navigate = useNavigate();
+
+    const handleClick = () => {
+      navigate("/");
+    };
+
     return (
         <div className="header-container">
-            <div className="logo-container">
+            <div className="logo-container" onClick={handleClick}>
                 <div className="logo">
                     <img src={logo} alt="Costa Calma Apartments" />
                 </div>

@@ -32,12 +32,12 @@
     }
 
     .pink {
-        color: pink;
+        color: $pink;
     }
 
     .golden {
-        color: #ffd700; /* Gold color */
-        text-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
+        color: $golden; /* Gold color */
+        text-shadow: $shine;
     }
     .hamburger-menu {
         display: none; // Hide by default on larger screens

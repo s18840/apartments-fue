@@ -33,7 +33,8 @@ i18n
             footer: "footer",
             header: "header",
             About_us: "About us",
-            Our_offer: "Our offer"
+            Our_offer: "Our offer",
+            Furnishings: "Furnishings",
         },
       },
       pl: {
@@ -42,7 +43,8 @@ i18n
             footer: "stopka",
             header: "nagłówek",
             About_us: "O nas",
-            Our_offer: "Nasza oferta"
+            Our_offer: "Nasza oferta",
+            Furnishings: "Wyposażenie",
         },
       },
       de: {
@@ -51,7 +53,8 @@ i18n
             footer: "Fusszeile",
             header: "Überschrift",
             About_us: "Über uns",
-            Our_offer: "Unser Angebot"
+            Our_offer: "Unser Angebot",
+            Furnishings: "Einrichtung",
         },
       },
       es: {
@@ -60,7 +63,8 @@ i18n
             footer: "pie de página",
             header: "encabezado",
             About_us: "Sobre nosotros",
-            Our_offer: "Nuestra oferta"
+            Our_offer: "Nuestra oferta",
+            Furnishings: "Mobiliario",
         },
       },
     },
