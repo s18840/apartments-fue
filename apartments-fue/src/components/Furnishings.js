@@ -8,35 +8,35 @@ function Furnishings(props) {
     <div className="apartment-furnishings">
       <div className="basic-container">
         <span className="material-icons-outlined">pool</span>
-        <p className="text">{t("Shared swimming pool")}</p>
+        <p className="text">{t("Shared_Swimming_pool")}</p>
       </div>
       <div className="basic-container">
         <span className="material-icons-outlined">directions_car</span>
-        <p className="text">{t("Free parking")}</p>
+        <p className="text">{t("Free_Parking")}</p>
       </div>
       <div className="basic-container">
         <span className="material-icons-outlined">smoke_free</span>
-        <p className="text">{t("No smoking allowed")}</p>
+        <p className="text">{t("No_Smoking_Allowed")}</p>
       </div>
       <div className="basic-container">
         <span className="material-icons-outlined">pets</span>
-        <p className="text">{t("No pets allowed")}</p>
+        <p className="text">{t("No_Pets_Allowed")}</p>
       </div>
       <div className="basic-container">
         <span className="material-icons-outlined">local_laundry_service</span>
-        <p className="text">{t("Washing machine and dryer")}</p>
+        <p className="text">{t("Washing_Machine_And_Dryer")}</p>
       </div>
       <div className="basic-container">
         <span className="material-icons-outlined">soap</span>
-        <p className="text">{t("Soap, shampoo")}</p>
+        <p className="text">{t("Soap_Shampoo")}</p>
       </div>
       <div className="basic-container">
         <span className="material-icons-outlined">home_repair_service</span>
-        <p className="text">{t("Towels, linen, toilet paper")}</p>
+        <p className="text">{t("Towels_Linen_Toilet_Paper")}</p>
       </div>
       <div className="basic-container">
         <span className="material-icons-outlined">checkroom</span>
-        <p className="text">{t("Wardrobe with hangers")}</p>
+        <p className="text">{t("Wardrobe_With_Hangers")}</p>
       </div>
       <div className="basic-container">
         <span className="material-icons-outlined">iron</span>
@@ -44,39 +44,39 @@ function Furnishings(props) {
       </div>
       <div className="basic-container">
         <span className="material-icons-outlined">tv</span>
-        <p className="text">{t("Tv with Smart TV")}</p>
+        <p className="text">{t("Tv_With_Smart_Tv")}</p>
       </div>
       <div className="basic-container">
         <span className="material-icons-outlined">wifi</span>
-        <p className="text">{t("Wi-Fi")}</p>
+        <p className="text">{t("Wi_Fi")}</p>
       </div>
       <div className="basic-container">
         <span className="material-icons-outlined">crib</span>
-        <p className="text">{t("Crib, chair, toys for the little ones")}</p>
+        <p className="text">{t("Crib_Chair_Toys_For_The_Little_Ones")}</p>
       </div>
       <div className="basic-container">
         <span className="material-icons-outlined">microwave</span>
-        <p className="text">{t("Microwave, kettle, cooktop, toaster")}</p>
+        <p className="text">{t("Microwave_Kettle_Cooktop_Toaster")}</p>
       </div>
       <div className="basic-container">
         <span className="material-icons-outlined">flatware</span>
-        <p className="text">{t("Crockery and cutlery")}</p>
+        <p className="text">{t("Crockery_And_Cutlery")}</p>
       </div>
       <div className="basic-container">
         <span className="material-icons-outlined">kitchen</span>
-        <p className="text">{t("Refrigerator and freezer")}</p>
+        <p className="text">{t("Refrigerator_And_Freezer")}</p>
       </div>
       <div className="basic-container">
         <span className="material-icons-outlined">coffee_maker</span>
-        <p className="text">{t("Coffee machine")}</p>
+        <p className="text">{t("Coffee_Machine")}</p>
       </div>
       <div className="basic-container">
         <span className="material-icons-outlined">deck</span>
-        <p className="text">{t("Terrace or balcony, furniture")}</p>
+        <p className="text">{t("Terrace_Or_Balcony_Furniture")}</p>
       </div>
       <div className="basic-container">
         <span className="material-icons-outlined">local_florist</span>
-        <p className="text">{t("Garden view")}</p>
+        <p className="text">{t("Garden_View")}</p>
       </div>
     </div>
   );

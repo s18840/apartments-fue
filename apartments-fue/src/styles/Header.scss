@@ -45,7 +45,7 @@
 
     .popup-menu {
         position: absolute;
-        top: 150px;
+        top: 72px;
         left: 0;
         width: 100%;
         z-index: 1000; // Ensure popup appears above other content
@@ -73,6 +73,19 @@
         align-items: center;
         gap: 10px;
         color: $white;
+        margin-right: 10px;
+
+        div {
+            &:hover {
+                color: #FFBF69;
+                font-weight: 600;
+            }
+        }
+
+        .language-option.selected {
+            color: #2EC4B6;
+        }
+
     }
 
     @media screen and (max-width: 768px) {
