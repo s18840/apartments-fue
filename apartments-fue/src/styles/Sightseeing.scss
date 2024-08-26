@@ -1,0 +1,30 @@
+@import "styles";
+.sightseeing-container {
+    display: flex;
+    padding: 20px;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    .accordion {
+        background-color: $color-2;
+        width: 800px;
+        list-style: none;
+
+        .accordion-li {
+            min-height: 35px;
+            border: 1px solid black;
+            .place-image {
+                width: 300px;
+                height: 300px;
+            }
+
+            .accordion-button {
+                &.active {
+                    .bold {
+                    font-weight: 500;
+                    }
+                }
+            }
+        }
+
+    }
+}

@@ -7,6 +7,7 @@ import apartment2 from "./assets/apartment27/2.webp";
 import Home from "./components/Home";
 import Apartment from "./components/Apartment";
 import separator from "./assets/separator-small-1.png";
+import Sightseeing from "./components/Sightseeing";
 
 const apartment23Images = importAll(
   require.context("./assets/apartment23", false, /\.(png|jpe?g|svg|webp)$/)
@@ -53,6 +54,12 @@ function App() {
                   beds={3}
                   surface={75}
                 />
+              }
+            />
+            <Route
+              path="/Sightseeing"
+              element={
+                <Sightseeing/>
               }
             />
           </Routes>

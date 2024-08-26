@@ -22,6 +22,10 @@ function Header() {
       navigate("/");
     };
 
+    const navigate_sightseeing = () => {
+        navigate("/sightseeing");
+      };
+
     return (
         <div className="header-container">
             <div className="logo-container" onClick={handleClick}>
@@ -45,9 +49,8 @@ function Header() {
             </div>
 
             <div className="navigation">
-                <div>{t("About_us")}</div>
-                <div>{t("Our_offer")}</div>
-                <div>{t("Blog")}</div>
+                <div onClick={handleClick}>{t("About_us")}</div>
+                <div onClick={navigate_sightseeing}>{t("Sightseeing")}</div>
             </div>
 
             <div className="languages">
@@ -70,9 +73,8 @@ function Header() {
             {menuOpen && (
                 <div className="popup-menu">
                     <div className="navigation">
-                        <div>{t("About_us")}</div>
-                        <div>{t("Our_offer")}</div>
-                        <div>{t("Blog")}</div>
+                        <div onClick={handleClick}>{t("About_us")}</div>
+                        <div onClick={navigate_sightseeing}>{t("Sightseeing")}</div>
                     </div>
                     <div className="languages">
                         {[
