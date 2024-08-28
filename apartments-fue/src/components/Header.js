@@ -5,26 +5,48 @@ import logo from "../assets/home.png";
 import { useEffect, useState } from 'react';
 import i18n from 'i18next';
 import { useNavigate } from 'react-router-dom';
-import { PL, GB, DE, ES } from 'country-flag-icons/react/3x2'
+import { PL, GB, DE, ES } from 'country-flag-icons/react/3x2';
 
 function Header() {
     const { t } = useTranslation();
     const [currentLanguage, setCurrentLanguage] = useState(i18n.language);
     const [menuOpen, setMenuOpen] = useState(false);
+
     const changeLanguage = (lang) => {
         i18n.changeLanguage(lang);
         setCurrentLanguage(lang);
+        setMenuOpen(false); // Close the menu after changing the language
     };
 
     const navigate = useNavigate();
 
     const handleClick = () => {
-      navigate("/");
+        navigate("/");
+        setMenuOpen(false); // Close the menu after navigating
     };
 
     const navigate_sightseeing = () => {
         navigate("/sightseeing");
-      };
+        setMenuOpen(false); // Close the menu after navigating
+    };
+
+    useEffect(() => {
+        const handleOutsideClick = (event) => {
+            if (menuOpen && !event.target.closest('.header-container')) {
+                setMenuOpen(false);
+            }
+        };
+
+        if (menuOpen) {
+            document.addEventListener('click', handleOutsideClick);
+        } else {
+            document.removeEventListener('click', handleOutsideClick);
+        }
+
+        return () => {
+            document.removeEventListener('click', handleOutsideClick);
+        };
+    }, [menuOpen]);
 
     return (
         <div className="header-container">
@@ -33,12 +55,8 @@ function Header() {
                     <img src={logo} alt="Costa Calma Apartments" />
                 </div>
                 <div className="title">
-                    <div className="pink">
-                        Costa Calma Apartments
-                    </div>
-                    <div className="golden">
-                        Fuerteventura
-                    </div>
+                    <div className="pink">Costa Calma Apartments</div>
+                    <div className="golden">Fuerteventura</div>
                 </div>
             </div>
 
@@ -48,7 +66,7 @@ function Header() {
                 <div className="line"></div>
             </div>
 
-            <div className="navigation">
+            <div className={`navigation ${menuOpen ? 'open' : ''}`}>
                 <div onClick={handleClick}>{t("About_us")}</div>
                 <div onClick={navigate_sightseeing}>{t("Sightseeing")}</div>
             </div>

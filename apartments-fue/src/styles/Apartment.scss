@@ -7,6 +7,11 @@
     max-width: 100px;
     font-weight: 600;
     cursor: pointer;
+
+    &:hover {
+      color: #FFBF69;
+      font-weight: 600;
+    }
   }
 
   .swipers-container {
@@ -126,6 +131,7 @@
     
     .apartment-furnishings-name {
       font-weight: $font-weight-500;
+      margin-top: 15px;
     }
 
     .apartment-basic {

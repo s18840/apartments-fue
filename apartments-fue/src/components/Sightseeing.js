@@ -98,7 +98,7 @@ function Sightseeing(props) {
     },
     {
       name: "Oasis Park",
-      latitude: 28.334794,
+      latitude: 28.184794,
       longitude: -14.16182,
       image: image1,
       description: "Oasis_Park",
