@@ -43,7 +43,7 @@ function Apartment(props) {
   return (
     <div className="apartment-container">
       <div className="back-button" onClick={handleClick}>
-        <span class="material-icons-outlined">chevron_left</span>
+        <span className="material-icons-outlined">chevron_left</span>
         {t("Back")}
       </div>
       <div className="swipers-container">
@@ -89,7 +89,20 @@ function Apartment(props) {
         </Swiper>
       </div>
       <div className="apartment-text-container">
-        <div className="apartment-name">{props.title}</div>
+        <div className="apartment-header-container">
+          <div className="apartment-name">{props.title}</div>
+          <div className="airbnb-button">
+            {props.number === 27 ? (
+              <div href="https://www.airbnb.pl/rooms/863722242925772929?guests=1&adults=1&s=67&unique_share_id=69fe8b66-b848-4380-bbb2-3aadfcd052ba">
+                {t("Airbnb_reservation")}
+              </div>
+            ) : (
+              <div href="https://www.airbnb.pl/rooms/30067044?check_in=2024-09-28&check_out=2024-10-06&guests=1&adults=1&s=67&unique_share_id=df41e7ba-2cca-4db9-acfc-323f7cb93021">
+                {t("Airbnb_reservation")}
+              </div>
+            )}
+          </div>
+        </div>
         <Facilities
           people={props.people}
           beds={props.beds}

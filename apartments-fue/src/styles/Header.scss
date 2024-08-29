@@ -11,6 +11,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
+        cursor: pointer;
         .logo {
             img {
                 max-width: 50px;
@@ -36,11 +37,11 @@
     }
 
     .golden {
-        color: $golden; /* Gold color */
+        color: $golden;
         text-shadow: $shine;
     }
     .hamburger-menu {
-        display: none; // Hide by default on larger screens
+        display: none;
     }
 
     .popup-menu {
@@ -48,8 +49,11 @@
         top: 72px;
         left: 0;
         width: 100%;
-        z-index: 1000; // Ensure popup appears above other content
+        z-index: 1000;
 
+                @media screen and (min-width: 768px) {
+                    top: 152px;
+                }
         .navigation,
         .languages {
             display: flex;
@@ -80,24 +84,25 @@
 
         div {
             &:hover {
-                color: #FFBF69;
-                font-weight: 600;
+                color: $color-2;
+                font-weight: $font-weight-600;
             }
         }
 
         .language-option.selected {
-            color: #2EC4B6;
+            color: $color-5;
         }
 
     }
 
     @media screen and (max-width: 768px) {
         .logo-container {
-            padding: 0; // Remove padding on smaller screens
+            cursor: pointer;
+            padding: 0;
         }
         
         .hamburger-menu {
-            display: flex; // Show hamburger menu on smaller screens
+            display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
@@ -127,7 +132,7 @@
 
         .navigation,
         .languages {
-            display: none; // Hide navigation and language selector by default on smaller screens
+            display: none;
             width: 100%;
             padding: 10px 0;
             background-color: $black;
@@ -135,7 +140,7 @@
 
         &.open .navigation,
         &.open .languages {
-            display: flex; // Show navigation and language selector when hamburger menu is clicked
+            display: flex;
         }
     }
 }

@@ -20,19 +20,19 @@ function Home(props) {
           </p>
         </div>
       </div>
-      <img className='separator' src={separator}/>
+      <img className='separator' src={separator} alt="separator"/>
       <div className="App-home">
         <Card
           image={props.image1}
-          title="Colores de Fuerteventura 1"
+          title="Colores de Fuerteventura 23"
           alt="app23"
-          path="colores_de_fuerteventura_1"
+          path="colores_de_fuerteventura_23"
         />
         <Card
           image={props.image2}
-          title="Colores de Fuerteventura 2"
+          title="Colores de Fuerteventura 27"
           alt="app27"
-          path="colores_de_fuerteventura_2"
+          path="colores_de_fuerteventura_27"
         />
       </div>
       <div className="home-city-info-text">
