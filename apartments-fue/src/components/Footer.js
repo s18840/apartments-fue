@@ -10,17 +10,13 @@ function Footer() {
         <div className="contact-us">{t("Contact_us")}</div>
         <div>{t("Host")}</div>
         <div className="footer-text">
-          {t("Mail")}: 
-          <div>
-          fuerteventura@gmail.com
-          </div>
-
+          {t("Mail")}:
+          <a href="mailto:coloresdefuerteventura@gmail.com">
+            coloresdefuerteventura@gmail.com
+          </a>
         </div>
         <div className="footer-text">
-          {t("Telephone")}:
-          <div>
-            +48
-            </div>
+          {t("Telephone")}:<div>+34 697 30 89 89</div>
         </div>
       </div>
     </div>
