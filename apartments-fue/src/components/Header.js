@@ -26,8 +26,18 @@ function Header() {
     };
 
     const navigate_sightseeing = () => {
-        navigate("/sightseeing");
-        setMenuOpen(false); // Close the menu after navigating
+        navigate("/Sightseeing");
+        setMenuOpen(false);
+    };
+
+    const navigate_climate = () => {
+        navigate("/Climate");
+        setMenuOpen(false);
+    };
+
+    const navigate_costacalma = () => {
+        navigate("/CostaCalma");
+        setMenuOpen(false);
     };
 
     useEffect(() => {
@@ -69,6 +79,8 @@ function Header() {
             <div className={`navigation ${menuOpen ? 'open' : ''}`}>
                 <div onClick={handleClick}>{t("About_us")}</div>
                 <div onClick={navigate_sightseeing}>{t("Sightseeing")}</div>
+                <div onClick={navigate_climate}>{t("Climate")}</div>
+                <div onClick={navigate_costacalma}>{t("CostaCalma")}</div>
             </div>
 
             <div className="languages">
@@ -93,6 +105,8 @@ function Header() {
                     <div className="navigation">
                         <div onClick={handleClick}>{t("About_us")}</div>
                         <div onClick={navigate_sightseeing}>{t("Sightseeing")}</div>
+                        <div onClick={navigate_climate}>{t("Climate")}</div>
+                        <div onClick={navigate_costacalma}>{t("CostaCalma")}</div>
                     </div>
                     <div className="languages">
                         {[

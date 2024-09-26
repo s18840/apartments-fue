@@ -8,6 +8,8 @@ import Home from "./components/Home";
 import Apartment from "./components/Apartment";
 import separator from "./assets/separator-small-1.png";
 import Sightseeing from "./components/Sightseeing";
+import CostaCalma from "./components/Costacalma";
+import Climate from "./components/Climate";
 
 const apartment23Images = importAll(
   require.context("./assets/apartment23", false, /\.(png|jpe?g|svg|webp)$/)
@@ -39,7 +41,7 @@ function App() {
                   number={27}
                   people={4}
                   beds={3}
-                  surface={55}
+                  surface={45}
                 />
               }
             />
@@ -52,7 +54,7 @@ function App() {
                   number={23}
                   people={4}
                   beds={3}
-                  surface={75}
+                  surface={45}
                 />
               }
             />
@@ -60,6 +62,18 @@ function App() {
               path="/Sightseeing"
               element={
                 <Sightseeing/>
+              }
+            />
+            <Route
+              path="/CostaCalma"
+              element={
+                <CostaCalma/>
+              }
+            />
+            <Route
+              path="/Climate"
+              element={
+                <Climate/>
               }
             />
           </Routes>

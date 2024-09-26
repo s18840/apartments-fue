@@ -1,9 +1,9 @@
 import React from "react";
-import { useTranslation } from "react-i18next";
+import { useTranslation, Trans  } from "react-i18next";
 import Card from "./Card";
 import CityInfo from "./CityInfo";
-import '../styles/Home.scss';
-import separator from '../assets/separator-small-1.png';
+import "../styles/Home.scss";
+import separator from "../assets/separator-small-1.png";
 
 function Home(props) {
   const { t } = useTranslation();
@@ -12,15 +12,18 @@ function Home(props) {
     <>
       <div className="home-info-text">
         <div className="center">
-          <p>
-            {t("Apartment_Info1")}
-          </p>
-          <p>
-            {t("Apartment_Info2")}
-          </p>
+        <Trans i18nKey="Apartment_Info1"
+          components={{
+            island: <strong>Fuerteventura</strong>,
+            colores27: <strong>Colores de Fuerteventura 27</strong>,
+            colores23: <strong>Colores de Fuerteventura 23</strong>,
+          }}
+        />
+          <p>{t("Apartment_Info2")}</p>
+          <p>{t("Apartment_Info3")}</p>
         </div>
       </div>
-      <img className='separator' src={separator} alt="separator"/>
+      <img className="separator" src={separator} alt="separator" />
       <div className="App-home">
         <Card
           image={props.image1}

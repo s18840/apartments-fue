@@ -8,8 +8,20 @@ function Footer() {
     <div className="footer-container">
       <div className="text">
         <div className="contact-us">{t("Contact_us")}</div>
-        <div>{t("Mail")}: colores_de_fuerteventura@gmail.com</div>
-        <div>{t("Telephone")}: +48 123 123 123</div>
+        <div>{t("Host")}</div>
+        <div className="footer-text">
+          {t("Mail")}: 
+          <div>
+          fuerteventura@gmail.com
+          </div>
+
+        </div>
+        <div className="footer-text">
+          {t("Telephone")}:
+          <div>
+            +48
+            </div>
+        </div>
       </div>
     </div>
   );
