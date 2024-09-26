@@ -1,18 +1,23 @@
 @import "styles";
 
 .footer-container {
-    //position: absolute;
-    //bottom: 0;
     width: 100%;
     background-color: $black;
 
     .text {
         color: $white;
-        padding: 1em;
+        padding: 16px;
         text-align: center;
         .contact-us {
             font-size: 20px;
             color: $color-1
         }
+    }
+
+    .footer-text {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
     }
 }

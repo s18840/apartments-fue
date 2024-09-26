@@ -1,33 +1,31 @@
 @import "styles";
+.sightseeing-info-container {
+  padding: 20px;
+}
+
 .sightseeing-container {
+  display: flex;
+  padding: 20px;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+
+  .selected-place {
     display: flex;
-    padding: 20px;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    .accordion {
-        //background-color: $color-2;
-        // background: $white;
-        width: 800px;
-        ul {
-            list-style: none;
-        }
-        .accordion-li {
-            min-height: 35px;
-            border: 1px solid black;
-            margin-right: 20px;
-            .place-image {
-                width: 300px;
-                height: 300px;
-            }
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 
-            .accordion-button {
-                &.active {
-                    .bold {
-                    font-weight: $font-weight-500;
-                    }
-                }
-            }
-        }
-
+    img, p {
+        width: 100%;
+        max-width: 600px;
+        height: auto;
+        display: block;
+        margin: 0 auto;
+        max-height: 500px;  
     }
+
+    .description {
+        padding: 20px 0;
+    }
+  }
 }
