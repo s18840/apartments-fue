@@ -21,7 +21,7 @@ const apartment27Images = importAll(
 
 function App() {
   return (
-    <Router>
+    <Router basename={process.env.PUBLIC_URL}>
       <div className="App">
         <Header />
         <div className="content">
