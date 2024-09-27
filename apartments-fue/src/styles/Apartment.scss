@@ -258,6 +258,78 @@
     .apartment-description {
       font-size: 14px;
       text-align: left;
+
+      .apartment-description-container {
+        display: flex;
+        gap: 20px;
+        flex-direction: column;
+
+        .description-header-text {
+          font-weight: 600;
+          font-size: 16px;;
+        }
+      }
+    }
+  }
+}
+
+.apartment-reservation-container {
+  padding-top: 20px;
+  display: flex;
+  gap: 20px;
+  flex-direction: column;
+  align-items: start;
+  width: 100%;
+
+  .reservation-header-text {
+    font-weight: 600;
+    font-size: 16px;;
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+
+    .airbnb-button {
+      width: 200px;
+      height: 30px;
+      // border: 1px solid $color-1;
+      border-radius: 90px;
+      background-color: $color-1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      &:hover {
+        background-color: $black;
+        cursor: pointer;
+      }
+
+      a {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        text-decoration: none;
+        font-size: 16px;
+        font-weight: $font-weight-600;
+        color: $black;
+
+        &:hover {
+          color: $color-1;
+        }
+      }
+    }
+  }
+
+  .reservation-description {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 20px;
+
+    .text {
+      margin: 0px;
     }
   }
 }
