@@ -1,6 +1,6 @@
 import React, { useState, useRef } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { useTranslation } from "react-i18next";
+import { useTranslation, Trans } from "react-i18next";
 import { FreeMode, Navigation, Thumbs, Pagination } from "swiper/modules";
 import "../styles/Apartment.scss";
 import "swiper/swiper-bundle.css";
@@ -145,89 +145,41 @@ function Apartment(props) {
 
         <div className="apartment-description">
           {props.number === 27 ? (
-            // <div>{t("Apartment_2_description")}</div>
             <div className="apartment-description-container">
               <div>
-                Szukasz idealnego miejsca na
-                <strong> wakacje na Fuerteventurze?</strong> Apartament
-                <strong> Colores de Fuerteventura 23</strong> w miejscowości
-                <strong> Costa Calma</strong> to nowoczesne, przytulne wnętrze,
-                które zapewnia wyjątkowy komfort i relaks. Po gruntownym
-                remoncie w 2023 roku, apartament oferuje
-                <strong> wysoki standard</strong> wykończenia, zaprojektowany z
-                myślą o wymagających Gościach. Położony jest w malowniczym
-                kompleksie z basenem i palmami.
+                <Trans i18nKey="Apartment_1_description" />
               </div>
               <div className="description-header-text">
-                Komfortowy apartament po remoncie – Twój prywatny raj na
-                Fuerteventurze
+                <div>{t("Apartment_header_text")}</div>
               </div>
               <div>
-                Apartament Colores de Fuerteventura 23 zlokalizowany na
-                parterze, z
-                <strong> tarasem w cieniu egzotycznych roślin</strong>,
-                gwarantuje spokojny wypoczynek w kameralnej atmosferze. Goście
-                mogą cieszyć się urokliwym wnętrzem w stylu
-                <strong> boho</strong> - w pastelowych kolorach wyspy.
-                Zaprojektowany został przez designera i zyskał wyjątkowy
-                wakacyjny, wyspiarski charakter.
+                <Trans i18nKey="Apartment_1_description_2" />
               </div>
               <div className="description-header-text">
-                Idealna lokalizacja – blisko plaży i lokalnych atrakcji
+                <div>{t("Apartment_header_text_2")}</div>
               </div>
               <div>
-                Apartament Colores de Fuerteventura 23 to doskonała baza
-                wypadowa do odkrywania piękna wyspy. Położony w pobliżu{" "}
-                <strong> plaży Sotavento</strong>, która znajduje się zaledwie
-                700 metrów od apartamentu, oferuje Gościom szybki dostęp do
-                jednej z najpiękniejszych plaż na wyspie. W bliskiej okolicy
-                znajduje się również centrum handlowe, restauracje, bary oraz
-                lokalny bazar, gdzie można poczuć egzotyczną atmosferę
-                Fuerteventury.
+                <Trans i18nKey="Apartment_1_description_3" />
               </div>
             </div>
           ) : (
-            // <div>{t("Apartment_1_description")}</div>
             <div className="apartment-description-container">
-            <div>
-              Szukasz idealnego miejsca na
-              <strong> wakacje na Fuerteventurze?</strong> Apartament
-              <strong> Colores de Fuerteventura 27</strong> w miejscowości
-              <strong> Costa Calma</strong> to nowoczesne, przytulne wnętrze,
-              które zapewnia wyjątkowy komfort i relaks. Po gruntownym
-              remoncie w 2023 roku, apartament oferuje
-              <strong> wysoki standard</strong> wykończenia, zaprojektowany z
-              myślą o wymagających Gościach. Położony jest w malowniczym
-              kompleksie z basenem i palmami.
+              <div>
+                <Trans i18nKey="Apartment_2_description" />
+              </div>
+              <div className="description-header-text">
+                <div>{t("Apartment_header_text")}</div>
+              </div>
+              <div>
+                <Trans i18nKey="Apartment_2_description_2" />
+              </div>
+              <div className="description-header-text">
+                <div>{t("Apartment_header_text_2")}</div>
+              </div>
+              <div>
+                <Trans i18nKey="Apartment_2_description_3" />
+              </div>
             </div>
-            <div className="description-header-text">
-              Komfortowy apartament po remoncie – Twój prywatny raj na
-              Fuerteventurze
-            </div>
-            <div>
-              Apartament Colores de Fuerteventura 27 zlokalizowany na
-              parterze, z
-              <strong> tarasem w cieniu egzotycznych roślin</strong>,
-              gwarantuje spokojny wypoczynek w kameralnej atmosferze. Goście
-              mogą cieszyć się urokliwym wnętrzem w stylu
-              <strong> boho</strong> - w pastelowych kolorach wyspy.
-              Zaprojektowany został przez designera i zyskał wyjątkowy
-              wakacyjny, wyspiarski charakter.
-            </div>
-            <div className="description-header-text">
-              Idealna lokalizacja – blisko plaży i lokalnych atrakcji
-            </div>
-            <div>
-              Apartament Colores de Fuerteventura 27 to doskonała baza
-              wypadowa do odkrywania piękna wyspy. Położony w pobliżu{" "}
-              <strong> plaży Sotavento</strong>, która znajduje się zaledwie
-              700 metrów od apartamentu, oferuje Gościom szybki dostęp do
-              jednej z najpiękniejszych plaż na wyspie. W bliskiej okolicy
-              znajduje się również centrum handlowe, restauracje, bary oraz
-              lokalny bazar, gdzie można poczuć egzotyczną atmosferę
-              Fuerteventury.
-            </div>
-          </div>
           )}
         </div>
 
@@ -239,29 +191,30 @@ function Apartment(props) {
         </div>
         <div className="apartment-reservation-container">
           <div className="reservation-header-text">
-            Zarezerwuj swój pobyt już dziś!
+            <div>{t("Apartment_reservation_header")}</div>
             <div className="airbnb-button">
-            {props.number === 27 ? (
-              <a href="https://www.airbnb.pl/rooms/863722242925772929?guests=1&adults=1&s=67&unique_share_id=69fe8b66-b848-4380-bbb2-3aadfcd052ba">
-                {t("Airbnb_reservation")}
-              </a>
-            ) : (
-              <a href="https://www.airbnb.pl/rooms/30067044?guests=1&adults=1&s=67&unique_share_id=df41e7ba-2cca-4db9-acfc-323f7cb93021">
-                {t("Airbnb_reservation")}
-              </a>
-            )}
-          </div>
+              {props.number === 27 ? (
+                <a href="https://www.airbnb.pl/rooms/863722242925772929?guests=1&adults=1&s=67&unique_share_id=69fe8b66-b848-4380-bbb2-3aadfcd052ba">
+                  {t("Airbnb_reservation")}
+                </a>
+              ) : (
+                <a href="https://www.airbnb.pl/rooms/30067044?guests=1&adults=1&s=67&unique_share_id=df41e7ba-2cca-4db9-acfc-323f7cb93021">
+                  {t("Airbnb_reservation")}
+                </a>
+              )}
+            </div>
           </div>
           <div className="reservation-description">
-            <p className="text">
-              Jeśli szukasz spokoju i bliskości natury, Apartament Colores de
-              Fuerteventura 23 jest idealnym wyborem na Twoje wakacje.
-            </p>
-            <p className="text">
-              Fuerteventura czeka na Ciebie – zanurz się w jej wyjątkowej
-              atmosferze i ciesz się niezapomnianymi wakacjami na jednej z
-              najpiękniejszych wysp Kanaryjskich.
-            </p>
+            <div className="text">
+              {props.number === 27 ? (
+                <p>{t("Apartment_1_reservation_1")}</p>
+              ) : (
+                <p>{t("Apartment_2_reservation_1")}</p>
+              )}
+            </div>
+            <div className="text">
+              <p>{t("Apartment_1_reservation_2")}</p>
+            </div>
           </div>
         </div>
       </div>
