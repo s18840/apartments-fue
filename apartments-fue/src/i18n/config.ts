@@ -94,6 +94,7 @@ i18n
             Fuerteventura_description: "<strong>{{island.props.children}}</strong> as one of the oldest Canary Islands offers plenty of attractions.<br /><br />Visit <strong>{{park.props.children}}</strong>, where you can admire vast dunes and picturesque landscapes, or <strong>{{oasis.props.children}}</strong> – a unique zoo and botanical garden. Don't miss <strong>{{cotillo.props.children}}</strong> – a charming fishing village with beautiful beaches and an 18th-century fortress. Discover the amazing beaches of <strong>{{sotavento.props.children}}</strong> and <strong>{{cofete.props.children}}</strong>, where nature amazes with its wild beauty. Visit <strong>{{ajuy.props.children}}</strong> – prehistoric caves, one of the oldest parts of the island. <strong>{{island.props.children}}</strong> is also a paradise for water sports enthusiasts – from surfing to diving.",
             Climate: "Climate",
             CostaCalma: "Costa Calma",
+            Place_select: "Select a place on the map to learn more."
         },
       },
       pl: {
@@ -164,6 +165,7 @@ i18n
             Fuerteventura_description: "<strong>{{island.props.children}}</strong> jako jedna z najstarszych wysp Kanaryjskich oferuje mnóstwo atrakcji.<br /><br />Odwiedź <strong>{{park.props.children}}</strong>, gdzie możesz podziwiać ogromne wydmy i malownicze krajobrazy, albo <strong>{{oasis.props.children}}</strong> – wyjątkowy ogród zoologiczny i botaniczny. Nie przegap <strong>{{cotillo.props.children}}</strong> – uroczą wioskę rybacką z pięknymi plażami i XVIII-wieczną fortecą. Odkryj niesamowite plaże <strong>{{sotavento.props.children}}</strong> i <strong>{{cofete.props.children}}</strong>, gdzie natura zachwyca swoją dzikością. Odwiedź <strong>{{ajuy.props.children}}</strong> – prehistoryczne jaskinie, jedną z najstarszych części wyspy. <strong>{{island.props.children}}</strong> to również raj dla miłośników sportów wodnych – od surfingu po nurkowanie.",
             Climate: "Klimat",
             CostaCalma: "Costa Calma",
+            Place_select: "Wybierz miejsce na mapie, aby dowiedzieć się więcej."
         },
       },
       de: {
@@ -234,7 +236,7 @@ i18n
             Fuerteventura_description: "<strong>{{island.props.children}}</strong> als eine der ältesten Kanarischen Inseln bietet viele Attraktionen.<br /><br />Besuchen Sie <strong>{{park.props.children}}</strong>, wo Sie riesige Dünen und malerische Landschaften bewundern können, oder <strong>{{oasis.props.children}}</strong> – einen einzigartigen Zoo und botanischen Garten. Verpassen Sie nicht <strong>{{cotillo.props.children}}</strong> – ein charmantes Fischerdorf mit schönen Stränden und einer Festung aus dem 18. Jahrhundert. Entdecken Sie die beeindruckenden Strände von <strong>{{sotavento.props.children}}</strong> und <strong>{{cofete.props.children}}</strong>, wo die Natur mit ihrer wilden Schönheit beeindruckt. Besuchen Sie <strong>{{ajuy.props.children}}</strong> – prähistorische Höhlen, die zu den ältesten Teilen der Insel gehören. <strong>{{island.props.children}}</strong> ist auch ein Paradies für Wassersportbegeisterte – vom Surfen bis zum Tauchen.",
             Climate: "Klima",
             CostaCalma: "Costa Calma",
-            
+            Place_select: "Wählen Sie einen Ort auf der Karte aus, um mehr zu erfahren."
           },
       },
       es: {
@@ -305,6 +307,7 @@ i18n
             Fuerteventura_description: "<strong>{{island.props.children}}</strong> como una de las islas más antiguas de Canarias ofrece muchas atracciones.<br /><br />Visita <strong>{{park.props.children}}</strong>, donde puedes admirar vastas dunas y paisajes pintorescos, o <strong>{{oasis.props.children}}</strong> – un zoológico y jardín botánico único. No te pierdas <strong>{{cotillo.props.children}}</strong> – un encantador pueblo de pescadores con hermosas playas y una fortaleza del siglo XVIII. Descubre las impresionantes playas de <strong>{{sotavento.props.children}}</strong> y <strong>{{cofete.props.children}}</strong>, donde la naturaleza sorprende con su belleza salvaje. Visita <strong>{{ajuy.props.children}}</strong> – cuevas prehistóricas, una de las partes más antiguas de la isla. <strong>{{island.props.children}}</strong> también es un paraíso para los amantes de los deportes acuáticos – desde el surf hasta el buceo.",
             Climate: "Clima",
             CostaCalma: "Costa Calma",
+            Place_select: "Seleccione una ubicación en el mapa para obtener más información."
           },
       },
     },

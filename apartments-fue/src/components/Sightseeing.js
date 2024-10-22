@@ -158,6 +158,7 @@ function Sightseeing(props) {
           }}
         />
       </div>
+      <p>{t("Place_select")}</p>
       <div className="sightseeing-container">
         <MapContainer
           center={[28.334794, -14.16182]}
@@ -201,7 +202,7 @@ function Sightseeing(props) {
               <p className="description">{t(selectedPlace.description)}</p>
             </>
           ) : (
-            <p>Select a place on the map to see details.</p>
+            <p>{t("Place_select")}</p>
           )}
         </div>
       </div>

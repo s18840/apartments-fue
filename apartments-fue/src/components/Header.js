@@ -1,7 +1,8 @@
 import { useTranslation } from "react-i18next";
 import "../styles/Header.scss";
 import "../styles/styles.scss";
-import logo from "../assets/home.png";
+import logo from "../assets/logo3.png";
+import logo_title from "../assets/logo3_title.png";
 import { useEffect, useState } from 'react';
 import i18n from 'i18next';
 import { useNavigate } from 'react-router-dom';
@@ -65,8 +66,9 @@ function Header() {
                     <img src={logo} alt="Costa Calma Apartments" />
                 </div>
                 <div className="title">
-                    <div className="pink">Costa Calma Apartments</div>
-                    <div className="golden">Fuerteventura</div>
+                    <div className="logo_title">
+                        <img src={logo_title} alt="Costa Calma Apartments" />
+                    </div>
                 </div>
             </div>
 

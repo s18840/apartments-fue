@@ -1,4 +1,20 @@
 @import "styles";
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  30% {
+    transform: scale(1.1);
+  }
+  50% {
+    transform: scale(1);
+  }
+  80% {
+    transform: scale(1);
+  }
+}
+
 .apartment-container {
   padding: 20px 50px;
 
@@ -132,13 +148,26 @@
     background-color: $grey;
     padding: 30px;
 
+    @media screen and (max-width: 768px) {
+      padding: 30px 30px 0 30px;
+    }
+    @media screen and (max-width: 480px) {
+      padding: 30px 30px 0 30px;
+    }
+
     .apartment-header-container {
       width: 100%;
       display: flex;
       justify-content: space-between;
       align-items: center;
 
-      @media screen and (max-width: 767px) {
+      @media screen and (max-width: 768px) {
+        gap: 10px;
+        flex-direction: column;
+      }
+  
+      @media screen and (max-width: 480px) {
+        gap: 10px;
         flex-direction: column;
       }
 
@@ -156,6 +185,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
+        animation: pulse 1s infinite;
 
         &:hover {
           background-color: $black;
@@ -217,16 +247,24 @@
       display: flex;
       width: 100%;
       align-items: center;
+      
       @media screen and (max-width: 1024px) {
         flex-direction: column;
+        gap: 20px;
       }
 
       @media screen and (max-width: 768px) {
         flex-direction: column;
+        gap: 20px;
       }
 
       @media screen and (max-width: 480px) {
         flex-direction: column;
+        gap: 20px;
+        .map{
+          height: 300px !important;
+          padding-bottom: 10px;
+        }
       }
     }
 
@@ -289,7 +327,16 @@
     width: 100%;
     align-items: center;
     justify-content: space-between;
+    @media screen and (max-width: 768px) {
+      gap: 10px;
+      flex-direction: column;
+    }
 
+    @media screen and (max-width: 480px) {
+      gap: 10px;
+      flex-direction: column;
+    }
+    
     .airbnb-button {
       width: 200px;
       height: 30px;
@@ -299,6 +346,7 @@
       display: flex;
       justify-content: center;
       align-items: center;
+      animation: pulse 1s infinite;
 
       &:hover {
         background-color: $black;
@@ -328,6 +376,14 @@
     flex-direction: column;
     align-items: start;
     gap: 20px;
+    @media screen and (max-width: 768px) {
+      gap: 0;
+    }
+
+    @media screen and (max-width: 480px) {
+      gap: 0;
+    }
+    
 
     .text {
       margin: 0px;
